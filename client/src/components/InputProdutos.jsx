@@ -31,7 +31,7 @@ const InputProdutos = () => {
                 <input id="price" type="number" className="form-control mt-3 w-25" value={price} onChange={e => setPrice(e.target.value)} placeholder="Valor do Produto"/>
                 <input id="inventory" type="number" className="form-control mt-3 w-25" value={inventory} onChange={e => setInventory(e.target.value)} placeholder="Quantidade"/>
 
-                <button className="btn btn-success w-10">Adicionar</button>
+                <button className="btn btn-success mt-4">Adicionar</button>
             </form>
         </Fragment>
     )
