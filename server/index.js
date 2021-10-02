@@ -69,7 +69,22 @@ app.put("/produtos/:id", async (req, res) => {
     }
 });
 
-//update a produtos
+//delete a produtos
+
+app.delete("/produtos/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deleteProdutosRequest = await pool.query("DELETE FROM produtos WHERE id = $1", [
+            id
+        ]);
+
+        res.json("Produto deletado");
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}) 
+
 
 
 app.listen(5000, () => {
