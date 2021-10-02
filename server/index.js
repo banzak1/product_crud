@@ -43,6 +43,18 @@ app.get("/produtos", async (req, res) => {
 
 //get a produtos
 
+app.get("/produtos/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const produtos = await pool.query("SELECT * FROM produtos WHERE id = $1", [id]);
+
+        res.json(produtos.rows[0]);
+
+    } catch (error) {
+        console.error(error.message);
+    }
+});
+
 //update a produtos
 
 //update a produtos
