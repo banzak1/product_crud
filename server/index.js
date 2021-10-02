@@ -57,6 +57,18 @@ app.get("/produtos/:id", async (req, res) => {
 
 //update a produtos
 
+app.put("/produtos/:id", async (req, res) => {
+    try {
+        const values = [req.params.id, req.body.name, req.body.price, req.body.inventory];
+        const updateProdutos = await pool.query("UPDATE produtos SET name = $2, price = $3, inventory = $4 WHERE id = $1", values);
+
+        res.json("Produtos atualizados")
+
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 //update a produtos
 
 
