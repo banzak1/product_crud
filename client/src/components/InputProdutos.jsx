@@ -17,7 +17,7 @@ const InputProdutos = () => {
                 body: JSON.stringify(body)
             });
 
-            console.log(response);
+            window.location = "/";
         } catch (error) {
             console.log(error.message);
         }
