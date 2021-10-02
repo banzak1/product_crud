@@ -83,7 +83,7 @@ app.delete("/produtos/:id", async (req, res) => {
     } catch (error) {
         console.log(error.message);
     }
-}) 
+});
 
 
 

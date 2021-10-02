@@ -33,7 +33,7 @@ const EditarProdutos = ({produtos}) => {
            Editar
             </button>
 
-            <div className="modal" id={`id${produtos.id}`} onClick={() => (setName(produtos.name), setPrice(produtos.price), setInventory(produtos.inventory))}>
+            <div className="modal" id={`id${produtos.id}`} >
             <div className="modal-dialog">
                 <div className="modal-content">
 
@@ -52,7 +52,7 @@ const EditarProdutos = ({produtos}) => {
                 <div className="modal-footer">
                     <button type="button" className="btn btn-warning" data-dismiss="modal" onClick= {e => updateProdutos(e)}>Editar</button>
 
-                    <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={() => (setName(produtos.name), setPrice(produtos.price), setInventory(produtos.inventory))}>Close</button>
+                    <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={() => (setName(produtos.name), setPrice(produtos.price), setInventory(produtos.inventory))}>Fechar</button>
                 </div>
 
                 </div>

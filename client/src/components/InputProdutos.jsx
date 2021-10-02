@@ -27,9 +27,9 @@ const InputProdutos = () => {
         <Fragment>
             <h1 className="text-center mt-5">Lista de Produtos</h1>
             <form className="d-flex flex-column mt-3  align-items-center" onSubmit={onSubmitForm}>
-                <input id="name" type="text" className="form-control mt-3 w-25" value={name} onChange={e => setName(e.target.value)} placeholder="Nome" required/>
-                <input id="price" type="text" className="form-control mt-3 w-25" value={price} onChange={e => setPrice(e.target.value)} placeholder="Valor do Produto" required/>
-                <input id="inventory" type="text" className="form-control mt-3 w-25" value={inventory} onChange={e => setInventory(e.target.value)} placeholder="Quantidade" required/>
+                <input id="name" type="text" className="form-control mt-3 " value={name} onChange={e => setName(e.target.value)} placeholder="Nome" required/>
+                <input id="price" type="text" className="form-control mt-3 " value={price} onChange={e => setPrice(e.target.value)} placeholder="Valor do Produto" required/>
+                <input id="inventory" type="text" className="form-control mt-3 " value={inventory} onChange={e => setInventory(e.target.value)} placeholder="Quantidade" required/>
 
                 <button className="btn btn-success mt-4">Adicionar</button>
             </form>
