@@ -27,10 +27,19 @@ app.post("/produtos", async(req, res) => {
     } catch (err) {
         console.error(err.message);
     }
-})
+});
 
 //get all produtos
 
+app.get("/produtos", async (req, res) => {
+    try {
+        const allProdutos = await pool.query("SELECT * FROM produtos");
+        res.json(allProdutos.rows);
+
+    } catch (error) {
+        console.error(error.message);
+    }
+});
 
 //get a produtos
 
