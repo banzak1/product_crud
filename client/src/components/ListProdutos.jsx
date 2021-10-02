@@ -1,4 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import EditarProdutos from './EditarProdutos';
+
 import './ListProdutos.css'
 
 const ListProdutos = () => {
@@ -56,7 +58,7 @@ const ListProdutos = () => {
                             <td>{produtos.name}</td>
                             <td>{produtos.price}</td>
                             <td>{produtos.inventory}</td>
-                            <td>Editar</td>
+                            <td><EditarProdutos produtos={produtos}/></td>
                             <td><button className="btn btn-danger" onClick={() => deleteProdutos(produtos.id)}>Deletar</button></td>
                         </tr>
                     ))}
