@@ -5,7 +5,12 @@
 
 <br>
 
+<p align="center">
+  <img alt="Crud_Teste" src="demo.gif" width="100%">
 
+</p>
+
+<br>
 
 ## 🚀 Tecnologias
 
